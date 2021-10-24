@@ -1,10 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Navbar/>
   <router-view/>
+  <Footer/>
 </template>
+
+
+<script>
+import { defineAsyncComponent } from '@vue/runtime-core'
+
+
+export default {
+    components: {
+      Navbar: defineAsyncComponent(() => import('./components/Navbar.vue')),
+      Footer: defineAsyncComponent(()=>import('./components/Footer.vue')),
+    } 
+}
+</script>
+
+
 
 <style lang="scss">
 #app {
@@ -15,16 +28,15 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.contact_button{
+    background-color: #0ACC0A;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    font-size: 14px;
 }
+
 </style>
