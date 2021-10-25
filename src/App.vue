@@ -1,10 +1,6 @@
 <template>
   <Navbar/>
-  <router-view v-slot="{ Component }">
-  <transition name="fade" mode="out-in">
-    <component :is="Component" />
-  </transition>
-</router-view>
+  <router-view/>
   <Footer/>
 </template>
 
@@ -24,36 +20,23 @@ export default {
 
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    //text-align: center;
+    color: #2c3e50;
+  }
 
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.contact_button{
+  .contact_button{
     background-color: #0ACC0A;
     border-style: none;
     color: white;
     border-radius: 5px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 4px;
     font-size: 14px;
-}
-
+  }
+  
 </style>
