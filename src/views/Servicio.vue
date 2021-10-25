@@ -61,6 +61,8 @@ export default {
 
   &:hover{
     cursor: pointer;
+    background-color: rgba(10, 10, 10, 0.4);
+
   }
 }
 

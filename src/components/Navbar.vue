@@ -1,10 +1,22 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark pb-0">
             <div class="container">
                 <!--Menu de navegacion-->
                 <a class="navbar-brand" >
                     <img class="btn" @click="goInicio" :src="logosvg" alt="Logo">
                 </a>
+
+                <!--Boton de contacto para movil-->
+                <button class="p-2  mt-4 d-block d-lg-none d-sm-block contact_button mt-n1">
+                    <a href="https://api.whatsapp.com/send?phone=5353928565&text=Hola!!!,%20bienvenido%20a20%CubanWebService.">
+                        <span>
+                            <img v-if="telfico !== null" :src="telfico">
+                        </span>
+                        WhatsApp  
+                        <!-- +53 5 498 67 67 -->
+                    </a>
+                </button>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,15 +33,17 @@
                    </div>
                 </div>   
                 <!--Boton de contacto-->
-                <button class="p-1  mt-4 d-none d-lg-block d-sm-none contact_button">
-                    <span>
-                        <img v-if="telfico !== null" :src="telfico">
-                    </span>
-                    WhatsApp  
-                    <!-- +53 5 498 67 67 -->
+                <button class="p-2  mt-4 d-none d-lg-block d-sm-none contact_button">
+                    <a href="https://api.whatsapp.com/send?phone=5353928565&text=Hola!!!,%20bienvenido%20a20%CubanWebService.">
+                        <span>
+                            <img v-if="telfico !== null" :src="telfico">
+                        </span>
+                        WhatsApp  
+                        <!-- +53 5 498 67 67 -->
+                    </a>
                 </button>
             </div>   
-        </nav>
+    </nav>
 </template>
 
 <script>
@@ -56,18 +70,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    a:link, a:visited, a:active{
+        text-decoration: none;
+        color: white;
+    }
+    .active{
+        color: #0ACC0A !important;
+    }
 
-.active{
-    color: #0ACC0A !important;
-}
+    .normal-link {
+        color: #ffffff;
+    }
 
-.normal-link {
-    color: #ffffff;
-}
-
-.navbar-dark{
-    background: rgba(0, 0, 0, 0.8) !important;
-}
+    .navbar-dark{
+        background: rgba(0, 0, 0, 0.8) !important;
+    }
 
 
 </style>

@@ -83,6 +83,9 @@ export default {
 </script>
 
 <style>
+    .active{
+        color: #0ACC0A !important;
+    }
     .bg-dark{
         background-color: black !important;
     }
