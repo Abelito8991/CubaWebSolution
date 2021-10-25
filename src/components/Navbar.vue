@@ -5,18 +5,20 @@
                 <a class="navbar-brand" >
                     <img class="btn" @click="goInicio" :src="logosvg" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegationBar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!--Menu Colapsado-->
                 <div class="collapse navbar-collapse justify-content-md-center" id="navegationBar">
+                   <div class="navbar-nav mr-auto">
                     <router-link v-for="ruta in routes" :key="ruta.name" :to="ruta"
-                    class="mt-4 mx-5 text-decoration-none"
+                    class="nav-item nav-link mt-4 mx-5 text-decoration-none"
                     v-slot="{isActive}"
                     >
                     <a class="text-decoration-none fw-bold" :class="isActive? 'active':'normal-link'">{{ruta.name}}</a>
                     </router-link>
+                   </div>
                 </div>   
                 <!--Boton de contacto-->
                 <button class="p-1  mt-4 d-none d-lg-block d-sm-none contact_button">
