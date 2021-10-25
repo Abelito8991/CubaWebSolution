@@ -1,12 +1,12 @@
 <template>
-  <footer class="container-fluid bottom-0" style="background-color: black;">
-        <div class="container">
+    <footer class="bottom-0 bg-dark">
+        <div class="container pt-5">
             <div class="row border-bottom border-light">
-                <div class="col-9 col-md-5 mt-5" >
+                <div class="col-sm-12 col-md-5 mt-5" id="logo">
                     <img class="btn" @click="goInicio" :src="logosvg" alt="Logo">
                 </div>
-                 <div class="col-3 col-md-7">
-                    <table class="table table-borderless">
+                <div class="col-sm-12 col-md-7">
+                    <table class="table table-borderless mt-5">
                         <thead class="fs-6 fw-bolder">
                           <tr>
                             <th class="text-white">INICIO</th>
@@ -33,24 +33,23 @@
                     </table>
                 </div>
             </div>
-            <div class="row pt-3" style="padding: 1em 5em 3em 5em;">
-                <div class="col-md-5">
+            <div class="row p-5">
+                <div class="col-sm-12 col-lg-5 p3">
                     <form class="form-inline d-flex">
                         <input class="form-control w-50 mr-sm-2" type="search" placeholder="Escribe tu e-mail" aria-label="Search">
                         <button class="btn btn-outline-success mx-3 my-2 my-sm-0" >Enviar</button>
                     </form>
                 </div>
-                <div class="col-md-7 row">
-                    <p class="col-8"></p>
-                    <div class="col-4">
+                <div class="col-sm-12 col-lg-7 row d-flex justify-content-sm-center justify-content-lg-end pt-sm-5 pt-lg-0">
+                    <div class="col-md-4 text-center">
                         <p class="text-white">SIGUENOS</p>
-                        <span class="btn p-0 mx-2">
+                        <span class="btn p-0">
                             <img :src="twitterlogo" >
                         </span>
-                        <span class="btn p-0 mx-2">
+                        <span class="btn p-0 ms-2">
                             <img :src="facelogo">
                         </span>
-                        <span class="btn p-0 mx-2">
+                        <span class="btn p-0 ms-2">
                             <img :src="iglogo" >
                         </span>
                     </div>
@@ -84,5 +83,23 @@ export default {
 </script>
 
 <style>
+    .bg-dark{
+        background-color: black !important;
+    }
+    .btn-outline-success{
+        color: #0ACC0A;
+    }
+    .btn-outline-success:hover{
+        color: white;
+        background-color: #0ACC0A;
+    }
+
+    /* Estilo para logo */
+    @media (max-width: 768px){
+        #logo{
+            text-align: center;
+        }
+        
+    }
 
 </style>

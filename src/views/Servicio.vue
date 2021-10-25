@@ -58,6 +58,10 @@ export default {
 }
 #service-container{
   background-color: rgba(43, 39, 39, 0.4);
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 
