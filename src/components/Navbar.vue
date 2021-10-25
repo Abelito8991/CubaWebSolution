@@ -34,7 +34,7 @@
                 </div>   
                 <!--Boton de contacto-->
                 <button class="p-2  mt-4 d-none d-lg-block d-sm-none contact_button">
-                    <a href="https://api.whatsapp.com/send?phone=5353928565&text=Hola!!!,%20bienvenido%20a20%CubanWebService.">
+                    <a href="https://api.whatsapp.com/send?phone=5354986767&text=Hola!!!,%20Quiero%20solicitar20%los20%servicios20%de20%CubanWebService.">
                         <span>
                             <img v-if="telfico !== null" :src="telfico">
                         </span>
