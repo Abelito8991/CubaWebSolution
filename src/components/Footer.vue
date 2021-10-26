@@ -34,13 +34,13 @@
                 </div>
             </div>
             <div class="row p-5">
-                <div class="col-sm-12 col-lg-5 p3">
+                <div class="col-12 col-sm-12 col-lg-5 p3">
                     <form class="form-inline d-flex">
                         <input class="form-control w-50 mr-sm-2" type="search" placeholder="Escribe tu e-mail" aria-label="Search">
-                        <button class="btn btn-outline-success mx-3 my-2 my-sm-0" >Enviar</button>
+                        <button class="btn btn-outline-success mx-3 my-2 my-sm-0">Enviar</button>
                     </form>
                 </div>
-                <div class="col-sm-12 col-lg-7 row d-flex justify-content-sm-center justify-content-lg-end pt-sm-5 pt-lg-0">
+                <div class="col-sm-12 col-lg-7 row d-flex justify-content-sm-center justify-content-lg-end pt-5 pt-sm-5 pt-lg-0">
                     <div class="col-md-4 text-center">
                         <p class="text-white">SIGUENOS</p>
                         <span class="btn p-0">
@@ -83,6 +83,9 @@ export default {
 </script>
 
 <style>
+    .active{
+        color: #0ACC0A !important;
+    }
     .bg-dark{
         background-color: black !important;
     }

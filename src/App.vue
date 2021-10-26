@@ -24,16 +24,16 @@ export default {
 
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.03s ease;
+  }
 
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
 
 // #app {
 //   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -52,6 +52,10 @@ export default {
     padding-right: 6px;
     padding-bottom: 4px;
     font-size: 14px;
+    
+    &:hover{
+      background-color: #179417;
+    }
 }
 
 </style>
