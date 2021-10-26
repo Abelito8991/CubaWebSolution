@@ -12,6 +12,16 @@ const routes = [
     component:()=> import(/*webpackChunkName: "Home "*/ '../views/Servicio.vue')
   },
   {
+    path: '/Detalles/:name',
+    name: 'Detalles',
+    component:()=> import(/*webpackChunkName: "Home "*/ '../views/ServicioDetalles.vue'),
+    props:(route)=>{
+      const {name} = route.params
+      return {name}
+    }
+
+  },
+  {
     path: '/Contacto',
     name: 'Contacto',
     component:()=> import(/*webpackChunkName: "Home "*/ '../views/Contacto.vue')
