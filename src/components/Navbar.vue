@@ -3,12 +3,12 @@
             <div class="container">
                 <!--Menu de navegacion-->
                 <a class="navbar-brand m-0">
-                    <img class="btn" @click="goInicio" :src="logosvg" alt="Logo">
+                    <img class="btn p-0" @click="goInicio" :src="logosvg" alt="Logo">
                 </a>
 
                 <!--Boton de contacto para movil-->
                 <button class="p-2 mt-4 mb-3 d-block d-lg-none d-sm-block contact_button d-flex justify-content-center">
-                    <a href="https://api.whatsapp.com/send?phone=5353928565&text=Hola!!!,%20bienvenido%20a20%CubanWebService.">
+                    <a href="https://api.whatsapp.com/send?phone=5354986767&text=text=Quiero solicitar los servicios de CubanWebService.">
                         <span>
                             <img v-if="telfico !== null" :src="telfico">
                         </span>
@@ -34,8 +34,8 @@
                 </div>   
 
                 <!--Boton de contacto-->
-                <button class="p-2  mt-4 d-none d-lg-block d-sm-none contact_button">
-                    <a href="https://api.whatsapp.com/send?phone=5354986767&text=Hola!!!,%20Quiero%20solicitar20%los20%servicios20%de20%CubanWebService.">
+                <button class="p-2  mt-4 mb-3 d-none d-lg-block d-sm-none contact_button">
+                    <a href="https://api.whatsapp.com/send?phone=5354986767&text=Quiero solicitar los servicios de CubanWebService.">
                         <span>
                             <img v-if="telfico !== null" :src="telfico">
                         </span>
@@ -65,9 +65,6 @@ export default {
         goInicio(){
             return this.$router.push({name:'Inicio'})
         },
-        hideNav(){
-            
-        }
     },
 }
 
