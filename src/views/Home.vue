@@ -3,25 +3,25 @@
     
         <!-- Background Header -->
         <section id="background-header">
-            <div class="text-white">
-            <div style="padding: 0em 10em">    
-                <h3 class="col-12 col-sm-12 col-lg-8 fw-bold pb-2">NOSOTROS LO SOLUCIONAMOS POR USTED</h3>
-                <h6 class="col-12 col-sm-12 col-lg-8 d-md-block">Solo nos cuentas cómo te la imaginas y nosotros 
-                        la hacemos realidad, nosotros creamos la web a su medida, profesional sin que tenga que preocuparse de nada, 
-                        nosotros nos encargamos de todo.
-                        Deja que los profesionales de CubanWebSolution se ocupen de tu web.
-                </h6>
-                <div class="col-md-12 col-lg-8 ">
-                    <div class="d-flex justify-content-end">
-                        <button @click="goContact" class="p-2 mt-4 contact_button fw-bold d-none d-sm-block">
-                            CONTACTO 
-                            <img :src="pointer_right">
-                        </button>
-                    </div>
-                    
-                </div>  
+            <div class="text-white container pt-5 pb-5">
+                <div class="ps-5 pe-5">    
+                    <h3 class="col-12 col-sm-12 col-lg-8 fw-bold pb-2">NOSOTROS LO SOLUCIONAMOS POR USTED</h3>
+                    <h6 class="col-12 col-sm-12 col-lg-8 d-md-block">Solo nos cuentas cómo te la imaginas y nosotros 
+                            la hacemos realidad, nosotros creamos la web a su medida, profesional sin que tenga que preocuparse de nada, 
+                            nosotros nos encargamos de todo.
+                            Deja que los profesionales de CubanWebSolution se ocupen de tu web.
+                    </h6>
+                    <div class="col-md-12 col-lg-8 ">
+                        <div class="d-flex justify-content-end">
+                            <button @click="goContact" class="p-2 mt-4 contact_button fw-bold d-none d-sm-block">
+                                CONTACTO 
+                                <img :src="pointer_right">
+                            </button>
+                        </div>
+                        
+                    </div>  
+                </div>
             </div>
-        </div>
 
         </section>
 
@@ -60,8 +60,8 @@
         <!-- Acerca de la empresa -->
         <div class="bg-dark">
             <div id="aboutUs" class="card text-white">
-                <div style="padding: 3em 10em ;">
-                    <div class="row">
+                <div class="container pt-5">
+                    <div class="row container ps-5 pe-5">
                         <!--Acerca de la empresa-->
                         <div class="col-12 col-sm-12 col-lg-6 text-justify container-fluid">
                             <h6 class="card-title fw-bold" style="color: #0ACC0A;">Acerca de la empresa</h6>
@@ -102,7 +102,7 @@
                         
                         <!--CONTACTO-->
                         <div class="col-12 col-sm-12 col-lg-6 d-none d-lg-block d-md-none" style="padding: 2em 5em;">
-                            <h5 class="card-title font-weight-bold">CONTACTO:</h5>
+                            <h5 class="card-title fw-bold">CONTACTO:</h5>
                             <ul class="ps-0">
                                 <li class="mb-3">
                                     <span>
@@ -128,7 +128,6 @@
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

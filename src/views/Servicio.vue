@@ -1,8 +1,8 @@
 <template>
   <main role="main">
-        <section id="servicios">
-            <div class="text-center" style="padding: 6em 10em ;">
-                <h4 class="font-weight-bold mb-3 text-white">SERVICIOS</h4>
+        <section id="servicios" class="pt-5 pb-5">
+            <div class="text-center container pt-5 ps-5 pe-5">
+                <h4 class="fw-bold mb-3 text-white">SERVICIOS</h4>
                 <div class="row justify-content-center text-white">
                     <div
                     v-for="service in servicios" :key="service.name" 

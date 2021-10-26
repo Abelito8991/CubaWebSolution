@@ -1,8 +1,8 @@
 <template>
 <main role="main">
-        <div id="contacto">
-            <div class="container" style="padding: 6em 10em;">
-                <div class="row mt-5 text-white">
+        <div id="contacto" class="pt-5 pb-5">
+            <div class="container pt-5 ps-5 pe-5">
+                <div class="container row mt-5 text-white">
                     <!-- Formularios para contactar -->
                     <div class="col-12 col-sm-12 col-lg-6">
                         <h4 class="fw-bold mb3">CONTACTO</h4>
@@ -66,8 +66,7 @@
                 </div>
             </div>    
         </div>
-
-        
+    
 </main>
 </template>
 
