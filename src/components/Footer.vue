@@ -33,25 +33,23 @@
                     </table>
                 </div>
             </div>
-            <div class="row p-5">
-                <div class="col-12 col-sm-12 col-lg-5 p3">
-                    <form class="form-inline d-flex">
-                        <input class="form-control w-50 mr-sm-2" type="search" placeholder="Escribe tu e-mail" aria-label="Search">
-                        <button class="btn btn-outline-success mx-3 my-2 my-sm-0">Enviar</button>
-                    </form>
-                </div>
-                <div class="col-sm-12 col-lg-7 row d-flex justify-content-sm-center justify-content-lg-end pt-5 pt-sm-5 pt-lg-0">
-                    <div class="col-md-4 text-center">
+            <div class="row p-2">
+                <div class="col-sm-12 col-lg-7 row d-flex justify-content-sm-center justify-content-lg-end pt-2 pt-sm-5 pt-lg-0">
+                    <div class="col-md-4 text-center pt-md-2 pb-4">
                         <p class="text-white">SIGUENOS</p>
-                        <span class="btn p-0">
+                        <!-- <span class="btn p-0">
                             <img :src="twitterlogo" >
-                        </span>
+                        </span> -->
+                        <a href="https://www.facebook.com/CubanwebSolution">
                         <span class="btn p-0 ms-2">
                             <img :src="facelogo">
                         </span>
+                        </a>
+                        <a href="https://www.instagram.com/cubanwebsolution/">
                         <span class="btn p-0 ms-2">
                             <img :src="iglogo" >
                         </span>
+                        </a>
                     </div>
                     
                 </div>
