@@ -17,16 +17,16 @@
                     </a>
                 </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
+                <button @click="navHide" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!--Menu Colapsado-->
-                <div class="collapse navbar-collapse justify-content-md-center" id="navegationBar">
+                <div class="navbar-collapse justify-content-md-center" :class="(navcollap)?'collapse':''" id="navegationBar">
                     <div class="navbar-nav mr-auto">
                         <router-link v-for="ruta in routes" :key="ruta.name" :to="ruta"
                         class="nav-item nav-link mt-4 mx-5 text-decoration-none"
-                        v-slot="{isActive}"
+                        v-slot="{isActive}" @click="navHide"
                         >
                         <a class="text-decoration-none fw-bold" :class="isActive? 'active':'normal-link'">{{ruta.name}}</a>
                         </router-link>
@@ -58,13 +58,18 @@ export default {
                 {name: 'Contacto'},
             ],
             logosvg: require('../assets/images/logo.svg'),
-            telfico: require('../assets/images/telfico.svg')
+            telfico: require('../assets/images/telfico.svg'),
+            navcollap: true,
         }
     },
     methods:{
         goInicio(){
             return this.$router.push({name:'Inicio'})
         },
+        navHide(e){
+            console.log(e.target)
+            this.navcollap= !this.navcollap
+        }
     },
 }
 
