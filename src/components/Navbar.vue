@@ -11,12 +11,12 @@
                 </button>
 
                 <!--Menu Colapsado-->
-                <div class="collapse navbar-collapse d-lg-flex bd-highlight" id="navegationBar">
+                <div class="collapse navbar-collapse d-lg-flex bd-highlight" id="navegationBar" ref="navegationBar">
                     
                     <div class="navbar-nav mr-auto ms-auto bd-highlight">
                         <router-link v-for="ruta in routes" :key="ruta.name" :to="ruta"
                         class="nav-item nav-link mt-4 mx-5 text-decoration-none"
-                        v-slot="{isActive}"
+                        v-slot="{isActive}" @click="navHide"
                         >
                         <a class="text-decoration-none fw-bold" :class="isActive? 'active':'normal-link'">{{ruta.name}}</a>
                         </router-link>
@@ -52,13 +52,17 @@ export default {
                 {name: 'Contacto'},
             ],
             logosvg: require('../assets/images/logo.svg'),
-            telfico: require('../assets/images/telfico.svg')
+            telfico: require('../assets/images/telfico.svg'),
         }
     },
     methods:{
         goInicio(){
             return this.$router.push({name:'Inicio'})
         },
+        navHide(){
+            console.log(this.$refs.navegationBar)
+            this.$refs.navegationBar.classList.remove("show")
+        }
     },
 }
 

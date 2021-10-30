@@ -15,42 +15,49 @@
                                     <label for="formNombre" style="font-size: 12px;">NOMBRE</label>
                                     <input 
                                         v-model="name"
-                                        placeholder="Tu nombre"
                                         type="text" 
                                         class="form-control form-control-sm bg-dark border-success text-light" 
                                         id="formNombre"
+                                        required
                                     >
                                 </div>
                                 <div class="col-lg-8">
                                     <label for="formEmail" style="font-size: 12px;">EMAIL</label>
                                     <input 
                                         v-model="email"
-                                        placeholder="Tu e-mail"
-                                        type="text" 
+                                        type="email" 
                                         class="form-control form-control-sm bg-dark border-success text-light" 
                                         id="formEmail"
+                                        required
                                     >
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-12 col-md-4">
-                                    <label for="formNombre" style="font-size: 12px;">SERVICIO</label>
-                                    <input 
+                                    <label for="formNombre" style="font-size: 12px;">SELECCIONE UN SERVICIO</label>
+                                    <select 
                                         v-model="service"
-                                        placeholder="Servicio a Solicitar"
-                                        type="text" 
                                         class="form-control form-control-sm bg-dark border-success text-light" 
                                         id="formServicio"
+                                        required
                                     >
+                                        <option 
+                                            value=""
+                                            v-for="servicio in servicios" :key="servicio.name"
+                                        >
+                                            {{servicio.name}}
+                                        </option>
+                                    </select>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-8">
                                     <label for="formEmail" style="font-size: 12px;">TELÉFONO</label>
                                     <input 
                                         v-model="phone"
-                                        placeholder="Tu telefono"
-                                        type="text" 
+                                        type="tel"
                                         class="form-control form-control-sm bg-dark border-success text-light" 
                                         id="formTelefono"
+                                        required
+                                        name="telefono"
                                     >
                                 </div>
                             </div>
@@ -58,10 +65,13 @@
                                 <label for="mensajeTextArea" style="font-size: 12px;">MENSAJE</label>
                                 <textarea 
                                     v-model="message"
-                                    placeholder="Escribe lo que creas que puede ayudarnos"
                                     class="form-control bg-dark border-success text-light" 
                                     id="mensajeTextArea" 
                                     rows="4"
+                                    minlength="10"
+                                    maxlength="200"
+                                    required
+                                    placeholder="Escribe algo que debamos saber"
                                 >
                                 </textarea>
                             </div>
@@ -109,6 +119,8 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import servicios  from '../assets/data/servicios'
+
 export default {
     name: 'ContactUs',
     data(){
@@ -118,6 +130,7 @@ export default {
             service: '',
             phone:'',
             message:'',
+            servicios:servicios,
         }
 
     },

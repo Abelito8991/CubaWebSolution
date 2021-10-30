@@ -30,7 +30,20 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+
+  // Regrsar la pantalla al inicio usando router history
+  // scrollBehavior(to, from, savedPosition) {
+  //   console.log('to',to,'\nfrom', from,'\nsavedPos', savedPosition);
+  // }
+})
+
+//Regresar la pantalla al inicio usando router hash
+router.beforeEach((to, from, next) => {
+  // trae la página de regreso a la cima
+  document.documentElement.scrollTop = 0
+  // No olvides llamar a next ()
+  next()
 })
 
 export default router
