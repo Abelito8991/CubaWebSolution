@@ -5,10 +5,15 @@
                 <a class="navbar-brand m-0">
                     <img class="btn p-0" @click="goInicio" :src="logosvg" alt="Logo">
                 </a>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
-                    <span class="navbar-toggler-icon"></span>
+                
+
+                    <button @click="navHide" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegationBar">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </button>
+                <!--Menu Colapsado-->
 
                 <!--Menu Colapsado-->
                 <div class="collapse navbar-collapse d-lg-flex bd-highlight" id="navegationBar" ref="navegationBar">
@@ -34,10 +39,12 @@
                             </a>
                         </button>  
                     </div>
-                </div>   
+                        </div>   
 
                 
-            </div>   
+                    </div>   
+                </div>
+            </div>
     </nav>
 </template>
 
